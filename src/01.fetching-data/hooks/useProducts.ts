@@ -19,7 +19,7 @@ type ProductResponse = {
   products: Product[];
   total: number;
   skip: number;
-  limit: number;
+  limi: number;
 };
 
 const useProducts = () => {
