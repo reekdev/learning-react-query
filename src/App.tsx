@@ -1,18 +1,15 @@
-import FetchData from "./01.fetching-data/components/FetchDataExample";
-import Parameterised from "./02.parameterized-queries/components/ParameterisedQueryExample";
-import PaginatedQueryExample from "./03.paginated-queries/components/PaginatedQueryExample";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      {/* <FetchData /> */}
       <div
         style={{
-          padding: 16,
-          minHeight: "100svh",
+          padding: 24,
         }}
       >
-        <PaginatedQueryExample />
+        <Link to="/index">Go to the index</Link>
+        <Outlet />
       </div>
     </>
   );

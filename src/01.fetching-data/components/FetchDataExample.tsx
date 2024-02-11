@@ -10,9 +10,9 @@ export default function FetchDataExample() {
     <>
       {isSuccess && (
         <ul className="list-group">
-          {products.products.map((product) => {
-            return <li className="list-group-item">{product.title}</li>;
-          })}
+          {products.products.map((product) => (
+            <li className="list-group-item">{product.title}</li>
+          ))}
         </ul>
       )}
     </>
