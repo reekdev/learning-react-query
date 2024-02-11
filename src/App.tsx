@@ -1,5 +1,6 @@
 import FetchData from "./01.fetching-data/components/FetchDataExample";
 import Parameterised from "./02.parameterized-queries/components/ParameterisedQueryExample";
+import PaginatedQueryExample from "./03.paginated-queries/components/PaginatedQueryExample";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           minHeight: "100svh",
         }}
       >
-        <Parameterised />
+        <PaginatedQueryExample />
       </div>
     </>
   );
