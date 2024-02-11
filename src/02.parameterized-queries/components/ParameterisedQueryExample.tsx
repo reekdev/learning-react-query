@@ -12,7 +12,11 @@ export default function ParameterisedQueryExample() {
     <>
       <select
         className="form-select mb-3"
-        onChange={(e) => setUserId(parseInt(e.target.value))}
+        onChange={(e) =>
+          setUserId(
+            e.target.value === "" ? undefined : parseInt(e.target.value)
+          )
+        }
         value={userId}
       >
         <option value=""></option>
@@ -20,6 +24,8 @@ export default function ParameterisedQueryExample() {
         <option value="2">User 2</option>
         <option value="3">User 3</option>
       </select>
+
+      {userId ? <h4>posts for user: {userId}</h4> : <h4>all posts</h4>}
 
       {isSuccess && (
         <ul className="list-group">
