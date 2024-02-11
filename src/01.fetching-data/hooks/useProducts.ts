@@ -29,6 +29,8 @@ const useProducts = () => {
       axios
         .get<ProductResponse>("https://dummyjson.com/products")
         .then((res) => res.data),
+
+    staleTime: 10 * 1000,
   });
 };
 
