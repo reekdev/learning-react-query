@@ -2,8 +2,9 @@ import { useState } from "react";
 import usePosts from "../hooks/usePosts";
 
 export default function PaginatedQueryExample() {
-  const pageSize = 5;
+  // const pageSize = 5;
   const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(5);
 
   const {
     data: posts,
@@ -16,6 +17,16 @@ export default function PaginatedQueryExample() {
 
   return (
     <>
+      <p>select page size</p>
+      <select
+        onChange={(e) => setPageSize(parseInt(e.target.value))}
+        style={{ marginBottom: 16 }}
+      >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+
       {isSuccess && (
         <ul className="list-group">
           {posts.map((post) => (

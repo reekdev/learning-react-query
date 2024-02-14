@@ -6,6 +6,8 @@ function App() {
       <div
         style={{
           padding: 24,
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <Link to="/index">Go to the index</Link>
